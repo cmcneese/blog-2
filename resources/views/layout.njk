@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>So Not a Medium Clone</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="nav navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Not Medium</a>
+        </div>
+
+        <div class="navbar-collapes">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="section">
+      <div class="container">
+        {% if old('error') %}
+          <div class="alert alert-danger">
+            <p>{{ old('error') }}</p>
+          </div>
+        {% endif %}
+
+
+        {% block content %}
+
+        {% endblock %}
+      </div>
+    </div>
+
+  </body>
+</html>

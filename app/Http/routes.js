@@ -18,3 +18,7 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+// Make the Application respont to "sign-up" urls
+Route.get('/sign-up', 'UserController.create');
+Route.post('/sign-up', 'UserController.store');
