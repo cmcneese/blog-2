@@ -17,7 +17,9 @@
 
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+// Show the welcome page if the user is logged in
+// If not logged in throw on error
+Route.on('/').render('welcome').middleware('auth');
 
 // Make the Application respont to "sign-up" urls
 Route.get('/sign-up', 'UserController.create');
@@ -27,3 +29,6 @@ Route.post('/sign-up', 'UserController.store');
 Route.get('/login', 'LoginController.create');
 // Respond to submitted login form
 Route.post('/login', 'LoginController.store');
+
+// Logout users on ANY type of request to "/logout"
+Route.any('/logout', 'LoginController.destroy');

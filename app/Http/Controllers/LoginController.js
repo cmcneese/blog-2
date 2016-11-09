@@ -16,7 +16,7 @@ class LoginController {
       // Chec that user's password matches the input password
       // Return true if everything is ok
       // Return false if anything fails
-      const valiLogin = yield request.auth.attempt(email, password);
+      const validLogin = yield request.auth.attempt(email, password);
 
       yield request.with({ success: 'You have logged in!' }).flash();
 
@@ -24,7 +24,7 @@ class LoginController {
       response.redirect('/');
     } catch (e) {
       // Send back the old inputs (but not the password)
-      yield request.wittOut('password')
+      yield request.withOut('password')
       // Send back an error message
       .andWith({ error: 'Credentials do not match.' })
       // Only show the messages once
@@ -34,11 +34,17 @@ class LoginController {
       response.redirect('back');
     }
 
-
-
   }
 // Allow users to logout
   * destroy(request, response) {
+    // Logout the user
+    yield request.auth.logout();
+
+    yield request.with({ success: 'You have logged out!' }).flash();
+
+    // Redirect to the login form
+    response.redirect('/login');
+  }
 
   }
 
