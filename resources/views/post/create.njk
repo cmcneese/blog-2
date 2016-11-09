@@ -1,0 +1,28 @@
+{% extends "layout" %}
+
+{% block content %}
+{{ form.open({ action: 'PostController.store' }) }}
+
+  {{ csrfField }}
+
+  <div class="form-group">
+    {{ form.label('Title', 'Title') }}
+    {{ form.text('Title', null, { class: 'form-control', placeholder: 'Title' }) }}
+  </div>
+
+  <div class="form-group">
+    {{ form.label('posted_at', 'Publish Date') }}
+    {{ form.date('posted_at', null, { class: 'form-control', placeholder: 'Publish Date' }) }}
+  </div>
+
+  <div class="form-group">
+    {{ form.label('Content', 'Content (Markdown Supported)') }}
+    {{ form.textarea('content', null, { class: 'form-control', placeholder: 'Content', rows: 12 }) }}
+  </div>
+
+  <div class="button">
+    {{ form.submit('Save', null, { class: 'btn btn-primary' }) }}
+  </div>
+
+{{ form.close() }}
+{% endblock %}
