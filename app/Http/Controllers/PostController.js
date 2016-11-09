@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const PostModel = use('App/Model/Post');
 const slug = require('slug');
@@ -19,8 +19,8 @@ class PostController {
 
 // Submit new post
   * store(request, response) {
-    //Grab User Inputs
-    const {title, post_at, content } = request.all();
+    // Grab User Inputs
+    const { title, post_at, content } = request.all();
     const { id } = request.currentUser;
 
 
@@ -51,4 +51,4 @@ class PostController {
 
 }
 
-module.exports = PostController
+module.exports = PostController;
