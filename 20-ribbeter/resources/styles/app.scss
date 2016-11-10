@@ -25,15 +25,19 @@ $font: 'Dosis', sans-serif;
 .nav-bar {
   background: #85d652;
   max-width: 100%;
-  margin-top: none;
-  border: none;
-
+  margin: none;
+  // border: none;
 
 }
 
 .nav__link {
   flex: right;
+
 }
 
 h1 {
+  padding: none;
+  margin: none;
+  border: none;
+  text-decoration: white;
 }
