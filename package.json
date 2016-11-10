@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x \"node --harmony\" server.js",
+    "assets:watch": "ember build -w -o public/dist",
     "start": "node --harmony server.js",
     "lint": "standard"
   },
@@ -57,7 +58,11 @@
   },
   "devDependencies": {
     "adonis-generators": "^0.4.8",
+    "eslint-plugin-html": "^1.6.0",
     "nodemon": "^1.11.0",
-    "standard": "^8.5.0"
+    "standard": "^8.5.0",
+    "vue": "^2.0.5",
+    "vue-router": "^2.0.1",
+    "vueify": "^9.2.4"
   }
 }
