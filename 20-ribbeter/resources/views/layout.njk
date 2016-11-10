@@ -7,13 +7,15 @@
     <title>Welcome to Ribbeter!</title>
   </head>
   <body>
-    <nav>
+    <nav class="nav-bar navbar-default navbar-fixed-top">
       <h1>Ribbeter</h1>
-      <ul>
-        <li><a href="/"></a></li>
-        <li><a href="/"></a></li>
-        <li><a href="/"></a></li>
-      </ul>
+      <div class="container">
+        <ul>
+          <li><a class="nav__link" href="/">Ribbets</a></li>
+          <li><a class="nav__link" href="/">Frogs</a></li>
+          <li><a class="nav__link" href="/">Login</a></li>
+        </ul>
+      </div>
     </nav>
     {% block content %}
 
