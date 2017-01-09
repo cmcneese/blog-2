@@ -23,21 +23,19 @@ $font: 'Dosis', sans-serif;
 
 
 .nav-bar {
-  background: #85d652;
+  display: flex;
+  justify-content: space-between;
   max-width: 100%;
   margin: none;
-  // border: none;
+  background: #9cd652;
 
 }
 
 .nav__link {
-  flex: right;
+  text-decoration: none;
 
 }
 
 h1 {
-  padding: none;
-  margin: none;
-  border: none;
-  text-decoration: white;
+  margin: 0;
 }

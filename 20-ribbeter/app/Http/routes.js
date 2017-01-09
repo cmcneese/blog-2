@@ -18,3 +18,5 @@
 const Route = use('Route');
 
 Route.on('/').render('layout');
+
+Route.any('*').render('vue');
