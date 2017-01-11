@@ -1,7 +1,6 @@
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
 
-
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 
 $c-primary: #96ca2d;
@@ -15,12 +14,9 @@ $m-gutter: 1rem;
 $m-max-width: 60rem;
 
 $font: 'Dosis', sans-serif;
-
-
 @import 'font-awesome/scss/font-awesome';
 @import 'box-sizing';
 @import 'reset';
-
 
 .nav-bar {
   display: flex;
@@ -30,6 +26,7 @@ $font: 'Dosis', sans-serif;
   background: #9cd652;
 
 }
+
 
 .nav__link {
   text-decoration: none;
