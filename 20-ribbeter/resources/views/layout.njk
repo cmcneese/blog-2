@@ -17,6 +17,21 @@
         </ul>
       </div>
     </nav>
+
+    {% if old('error') %}
+            <div class="error alert">
+              <p class="animated bounce"> {{ old('error') }}  </p>
+            </div>
+
+          {% endif %}
+
+          {% if old('success') %}
+            <div class="error alert">
+              <p class="animated bounce">{{ old('success') }}</p>
+            </div>
+
+          {% endif %}
+
     {% block content %}
 
     {% endblock %}
