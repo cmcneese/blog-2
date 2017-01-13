@@ -11,29 +11,38 @@
       <h1>Ribbeter</h1>
       <div class="container">
         <ul class="container__nav">
-          <li><a class="nav__link" href="/">Ribbets</a></li>
-          <li><a class="nav__link" href="/">Frogs</a></li>
-          <li><a class="nav__link" href="/">Login</a></li>
+          <li>
+            <a class="nav__link" href="/">Ribbets</a>
+          </li>
+          <li>
+            <a class="nav__link" href="/">Frogs</a>
+          </li>
+          <li>
+            <a class="nav__link" href="/">Login</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     {% if old('error') %}
-            <div class="error alert">
-              <p class="animated bounce"> {{ old('error') }}  </p>
-            </div>
+      <div class="error alert">
+        <p class="animated bounce">
+          {{ old('error') }}
+        </p>
+      </div>
 
-          {% endif %}
+    {% endif %}
 
-          {% if old('success') %}
-            <div class="error alert">
-              <p class="animated bounce">{{ old('success') }}</p>
-            </div>
+    {% if old('success') %}
+      <div class="error alert">
+        <p class="animated bounce">{{ old('success') }}</p>
+      </div>
 
-          {% endif %}
+    {% endif %}
 
-    {% block content %}
+    {% block content %}{% endblock %}
 
-    {% endblock %}
+    <script src="/dist/app.js" type="text/javascript"></script>
+
   </body>
 </html>
