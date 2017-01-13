@@ -17,6 +17,7 @@
 
 const Route = use('Route');
 
-Route.on('/').render('layout');
+Route.get('/register', 'UserController.index');
+Route.post('/register', 'UserController.store');
 
 Route.any('*').render('vue');
