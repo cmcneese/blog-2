@@ -1,6 +1,6 @@
 'use strict';
 const User = use('App/Model/User');
-const Hash = use('Hash');
+
 
 class UserController {
 
@@ -11,6 +11,17 @@ class UserController {
   }
   * create(request, response) {
     yield response.sendView('user.create');
+  }
+
+  * store(request, response) {
+    const { username } = request.all();
+    const { id } = request.currentUser;
+
+    const user = yield UserModel.create({
+      user_id: id,
+      username,
+      email,
+    });
   }
 }
 
