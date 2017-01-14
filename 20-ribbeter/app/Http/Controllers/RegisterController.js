@@ -1,39 +1,50 @@
 'use strict';
 
-const User = use('App/Model/User');
-const Hash = use('Hash');
+const Ribbit = use('App/Model/User');
+// const Hash = use('Hash');
 
 class RegisterController {
 
-  * create(request, response) {
-    yield response.sendView('user.create');
+  * index(request, response) {
+    const ribbits = yield Ribbit.with('user').fetch();
+
+    response.send(ribbits);
   }
 
   * store(request, response) {
-    const { username, email, password } = request.all();
+    const input = request.only('body');
+    input.user_id = request.currentUser.id;
+    const ribbit = yield Ribbit.create(input);
 
-    try {
-      const user = yield User.create({
-        username,
-        email,
-        password: yield Hash.make(password),
-      });
-
-      yield request.auth.login(user);
-
-      yield request.with({
-        success: 'Ribbit! Your account has been created!',
-      }).flash();
-
-      response.redirect('/users');
-    } catch (e) {
-      yield request
-      .withOut('password')
-      .andWith({ error: 'Ribbit! That username or email is already taken.' })
-      .flash();
-
-      response.redirect('back');
-    }
+    response.send(ribbit);
   }
-}
+
+  * show(request, response) {
+    const id = request.param('id');
+    const ribbit = yield Ribbit.with('user').where({ id }).firstOrFail();
+
+    response.send(ribbit);
+  }
+
+  * update(request, response) {
+    const input = request.only('user_id', 'body');
+    const id = request.param('id');
+
+    const ribbit = yield Ribbit.with('user').where({ id }).firstOrFail();
+    ribbit.fill(input);
+    yield ribbit.save(input);
+
+    response.send(ribbit);
+  }
+
+  * destroy(request, response) {
+    const id = request.param('id');
+    const ribbit = yield Ribbit.query().where({ id }).firstOrFail();
+    yield ribbit.delete();
+
+    response.status(204).send();
+  }
+    }
+
+
 module.exports = RegisterController;
