@@ -3,7 +3,7 @@
 const Ribbit = use('App/Model/User');
 // const Hash = use('Hash');
 
-class RegisterController {
+class RibbitController {
 
   * index(request, response) {
     const ribbits = yield Ribbit.with('user').fetch();
@@ -47,4 +47,4 @@ class RegisterController {
     }
 
 
-module.exports = RegisterController;
+module.exports = RibbitController;
