@@ -32,4 +32,4 @@ Route.post('/register', 'UserController.store');
 
 Route.any('/logout', 'LoginController.destroy');
 
-Route.any('*').render('vue').middleware('auth');
+// Route.any('*').render('vue').middleware('auth');
