@@ -38,4 +38,4 @@ class RegisterController {
 }
 
 
-module.exports = RibbitController;
+module.exports = RegisterController;
