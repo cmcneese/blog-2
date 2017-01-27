@@ -1,17 +1,26 @@
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
-$brandprimary: #93CA62;
-$brandsecondary: #EDF7F2;
-$brandwhite: #FFFFFF;
-$brandaccent: #4AB5BD;
-$c-danger: #de6363;
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'scss/font-awesome';
+
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7FC6BC;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+
+
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+$font: 'Dosis', sans-serif;
+@import 'scss/font-awesome';
 @import 'box-sizing';
-@import 'register';
-@import 'error';
+@import 'reset';
+@import 'navbar';
 @import 'users';
+
 
 .fullpage {
   min-height: 100vh;
@@ -39,14 +48,14 @@ ul {
 }
 
 .navbar {
-  margin: 0;
-  background: $brandprimary;
-  color: $brandwhite;
   display: flex;
+  margin: 0;
   flex-direction: row;
-  flex-grow: 1;
+  background: $brandprimary;
   justify-content: space-between;
+  flex-grow: 1;
   padding: 0.7rem;
+  color: $brandwhite;
 
   &__linklist {
     display: flex;
@@ -54,13 +63,13 @@ ul {
   }
 
   &__links {
-    text-decoration: none;
     color: $brandwhite;
     margin-left: 0.5rem;
+    text-decoration: none;
   }
 }
 
-.container_flex {
+.container-flex {
   display: flex;
   justify-content: center;
 }
