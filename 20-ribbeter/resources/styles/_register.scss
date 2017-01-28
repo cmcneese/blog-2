@@ -25,9 +25,9 @@
 
   &-header {
     background: $c-primary;
-    color: $c-white;
     padding: 0.2rem;
     margin: 0;
+    color: $c-white;
   }
 }
 
@@ -37,11 +37,11 @@
   justify-content: space-between;
 
   &_signup {
-    background: $c-primary;
-    color: $c-white;
     padding: 0.2rem;
     margin: 0.5rem;
+    background: $c-primary;
     border: none;
+    color: $c-white;
     font-size: 1rem;
   }
 
