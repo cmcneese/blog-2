@@ -25,7 +25,7 @@ class RegisterController {
         success: 'Success! Your account has been created!',
       }).flash();
 
-      response.redirect('/users');
+      response.redirect('/user');
     } catch (e) {
       yield request
       .withOut('password')

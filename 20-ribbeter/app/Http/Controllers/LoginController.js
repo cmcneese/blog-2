@@ -25,7 +25,7 @@ class LoginController {
 
     yield request.with({ success: 'You have been logged out!' }).flash();
 
-    response.redirect('back');
+    response.redirect('/login');
   }
 }
 module.exports = LoginController;
