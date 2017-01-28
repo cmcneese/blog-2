@@ -1,23 +1,19 @@
 'use strict';
-const User = use('App/Model/User');
+const UserModel = use('App/Model/User');
 
 
 class UserController {
-
   * index(request, response) {
-    const users = yield User.all();
+    const users = yield UserModel.all();
 
-    yield response.sendView('users.index', { users: users.toJSON() });
+    yield response.sendView('user.index', { users: users.toJSON() });
   }
-
   * create(request, response) {
     yield response.sendView('user.create');
   }
-
   * store(request, response) {
     const { username } = request.all();
     const { id } = request.currentUser;
-
 
     const user = yield UserModel.create({
       user_id: id,
@@ -25,6 +21,6 @@ class UserController {
       email,
     });
   }
-}
+  }
 
 module.exports = UserController;

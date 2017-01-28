@@ -4,23 +4,28 @@
 
   <div class="section">
     <div class="container">
-      <h1 class="users"> Users </h1>
+      <h1 class="users">
+        Users
+      </h1>
       <div class="row">
         {% for item in users %}
-        <div class="row__item">
-          <div class="user-container">
-            <div>
-              <img src="http://placecera.com/g/200/300" class= "user_profile-pic"alt="michael cera" />
+          <div class="row__item">
+            <div class="user-container">
+              <div>
+                <img src="http://placecera.com/g/200/300" class="user_profile-pic" alt="michael cera"/>
+              </div>
+              <div class="row__container">
+                <div class="row__container-name">
+                  ${{ item.username }}
+                </div>
+                <div class="row__container-username">
+                  {{ item.email }}
+                </div>
+              </div>
             </div>
-            <div class="row__container">
-            <div class="row__container-name"> ${{ item.username }} </div>  {# //! TO DO: add first name and last name to form/controller // #}
-            <div class="row__container-username"> {{ item.email }} </div>
           </div>
-          </div>
-        </div>
         {% endfor %}
       </div>
     </div>
   </div>
-
 {% endblock %}

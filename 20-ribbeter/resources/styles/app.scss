@@ -21,6 +21,19 @@ $font: 'Dosis', sans-serif;
 @import 'navbar';
 @import 'users';
 
+.content-container {
+  max-width: 25rem;
+  margin: 0 auto;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+
+
+  h2 {
+    margin: 0;
+    padding: 0.5rem;
+    background: $c-primary;
+    color: $c-pure-white;
+  }
+}
 
 .fullpage {
   min-height: 100vh;
@@ -72,4 +85,102 @@ ul {
 .container-flex {
   display: flex;
   justify-content: center;
+}
+
+.row {
+  align-items: flex-start;
+
+  &__item {
+    padding: 0;
+  }
+
+  &__item--sidebar {
+    flex-basis: calc(35% - 2rem);
+  }
+
+  &__item--right {
+    flex-basis: calc(65% - 2rem);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__header {
+    margin: 0;
+    padding: 0.3rem;
+    background: $c-primary;
+    color: $c-pure-white;
+  }
+
+  &__content {
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  &__row {
+    padding: 1rem;
+    border-top: 0.1rem solid $c-secondary;
+
+    a {
+      color: $c-secondary-light;
+      text-decoration: none;
+    }
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0.2rem solid $c-secondary;
+    border-left: 0;
+    outline: none;
+    background: $c-white;
+    font-size: 1rem;
+    resize: none;
+
+    &:focus {
+      border: $c-primary;
+    }
+  }
+}
+
+.card__buttons {
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-top: 0.1rem solid $c-secondary;
+
+  a {
+    text-decoration: none;
+  }
+
+  .btn {
+    padding: 1rem;
+  }
+}
+
+.card-content {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+
+  .button {
+    width: 100%;
+    padding: 0.5rem;
+    background: $c-white;
+  }
+
+  a {
+    color: $c-secondary;
+    text-decoration: none;
+  }
 }
