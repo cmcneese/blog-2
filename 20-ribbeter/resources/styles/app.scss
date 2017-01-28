@@ -37,7 +37,7 @@ $font: 'Dosis', sans-serif;
 
 .fullpage {
   min-height: 100vh;
-  background: $brandsecondary;
+  background: $c-secondary;
   font-family: 'Dosis', sans-serif;
 }
 
@@ -64,7 +64,7 @@ ul {
   display: flex;
   margin: 0;
   flex-direction: row;
-  background: $brandprimary;
+  background: $c-primary;
   justify-content: space-between;
   flex-grow: 1;
   padding: 0.7rem;
@@ -76,7 +76,7 @@ ul {
   }
 
   &__links {
-    color: $brandwhite;
+    color: $c-white;
     margin-left: 0.5rem;
     text-decoration: none;
   }

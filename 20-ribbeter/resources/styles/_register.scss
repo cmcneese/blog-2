@@ -5,7 +5,7 @@
 
 .form-control {
   border: none;
-  border-bottom: 0.2rem solid $brandaccent;
+  border-bottom: 0.2rem solid $c-pure-white;
   margin: 0.2rem 0;
 }
 
@@ -18,14 +18,14 @@
 }
 
 .container__form {
-  background: $brandwhite;
+  background: $c-white;
   width: 32rem;
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
   margin: 4rem;
 
   &-header {
-    background: $brandprimary;
-    color: $brandwhite;
+    background: $c-primary;
+    color: $c-white;
     padding: 0.2rem;
     margin: 0;
   }
@@ -37,8 +37,8 @@
   justify-content: space-between;
 
   &_signup {
-    background: $brandprimary;
-    color: $brandwhite;
+    background: $c-primary;
+    color: $c-white;
     padding: 0.2rem;
     margin: 0.5rem;
     border: none;
@@ -46,8 +46,8 @@
   }
 
   &_login {
-    background: $brandsecondary;
-    color: $brandaccent;
+    background: $c-secondary;
+    color: $c-pure-white;
     padding: 0.2rem;
     margin: 0.5rem;
     border: none;
