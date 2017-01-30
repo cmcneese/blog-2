@@ -9,7 +9,7 @@ $c-secondary: #4bb5c1;
 $c-secondary-light: #7FC6BC;
 $c-white: #edf7f2;
 $c-pure-white: #fff;
-
+$c-danger: orange;
 
 $m-gutter: 1rem;
 $m-max-width: 60rem;
@@ -20,6 +20,8 @@ $font: 'Dosis', sans-serif;
 @import 'reset';
 @import 'navbar';
 @import 'users';
+@import 'register';
+@import 'error';
 
 .content-container {
   max-width: 25rem;
@@ -62,12 +64,12 @@ ul {
 
 .navbar {
   display: flex;
-  margin: 0;
   flex-direction: row;
-  background: $c-primary;
-  justify-content: space-between;
   flex-grow: 1;
+  justify-content: space-between;
+  margin: 0;
   padding: 0.7rem;
+  background: $c-primary;
   color: $c-white;
 
   &__linklist {
@@ -76,8 +78,8 @@ ul {
   }
 
   &__links {
-    color: $c-white;
     margin-left: 0.5rem;
+    color: $c-white;
     text-decoration: none;
   }
 }
@@ -116,8 +118,8 @@ ul {
   }
 
   &__content {
-    padding: 0.5rem;
     width: 100%;
+    padding: 0.5rem;
   }
 
   &__row {
