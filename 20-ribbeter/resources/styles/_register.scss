@@ -1,0 +1,92 @@
+
+.content-container {
+  max-width: 25rem;
+  margin: 0 auto;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+
+  h2 {
+    margin: 0;
+    padding: 0.5rem;
+    background: $c-primary;
+    color: $c-pure-white;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background: $c-pure-white;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 0.2rem solid $c-secondary-light;
+  margin: 0.2rem 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  border: none;
+  margin: 0.2rem;
+}
+
+.container__form {
+  background: $c-white;
+  width: 32rem;
+  margin: 4rem;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
+
+  &-header {
+    padding: 0.2rem;
+    margin: 0;
+    background: $c-primary;
+    color: $c-white;
+  }
+}
+
+.button-container {
+  display: flex;
+  // flex-grow: 1;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  border-top: 0.1rem solid $c-secondary;
+  background: $c-pure-white;
+}
+
+.btn-success {
+  padding: 0.6rem;
+  border: 0;
+  background: $c-white;
+  color: $c-secondary;
+  font-size: 0.8rem;
+}
+
+.btn-primary {
+  padding: 0.6rem;
+  border: 0;
+  background: $c-primary;
+  color: $c-pure-white;
+  font-size: 0.8rem;
+}
+
+  // &_signup {
+  //   margin: 0.5rem;
+  //   padding: 0.2rem;
+  //   background: $c-primary;
+  //   border: none;
+  //   color: $c-white;
+  //   font-size: 1rem;
+  // }
+  //
+  // &_login {
+  //   background: $c-secondary;
+  //   color: $c-pure-white;
+  //   padding: 0.2rem;
+  //   margin: 0.5rem;
+  //   border: none;
+  //   font-size: 1rem;
+  // }

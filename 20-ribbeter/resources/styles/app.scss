@@ -2,7 +2,186 @@
 // @import 'normalize-css/normalize';
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-@import 'font-awesome/scss/font-awesome';
-@import 'box-sizing';
 
-@import 'adonis';
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7FC6BC;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+$c-danger: orange;
+
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+$font: 'Dosis', sans-serif;
+@import 'scss/font-awesome';
+@import 'box-sizing';
+@import 'reset';
+@import 'navbar';
+@import 'users';
+@import 'register';
+@import 'error';
+
+.content-container {
+  max-width: 25rem;
+  margin: 0 auto;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+
+
+  h2 {
+    margin: 0;
+    padding: 0.5rem;
+    background: $c-primary;
+    color: $c-pure-white;
+  }
+}
+
+.fullpage {
+  min-height: 100vh;
+  background: $c-secondary;
+  font-family: 'Dosis', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  padding: 1rem;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar_container {
+  display: flex;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.7rem;
+  background: $c-primary;
+  color: $c-white;
+
+  &__linklist {
+    display: flex;
+    margin: 0 1rem;
+  }
+
+  &__links {
+    margin-left: 0.5rem;
+    color: $c-white;
+    text-decoration: none;
+  }
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+
+  &__item {
+    padding: 0;
+  }
+
+  &__item--sidebar {
+    flex-basis: calc(35% - 2rem);
+  }
+
+  &__item--right {
+    flex-basis: calc(65% - 2rem);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__header {
+    margin: 0;
+    padding: 0.3rem;
+    background: $c-primary;
+    color: $c-pure-white;
+  }
+
+  &__content {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  &__row {
+    padding: 1rem;
+    border-top: 0.1rem solid $c-secondary;
+
+    a {
+      color: $c-secondary-light;
+      text-decoration: none;
+    }
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0.2rem solid $c-secondary;
+    border-left: 0;
+    outline: none;
+    background: $c-white;
+    font-size: 1rem;
+    resize: none;
+
+    &:focus {
+      border: $c-primary;
+    }
+  }
+}
+
+.card__buttons {
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-top: 0.1rem solid $c-secondary;
+
+  a {
+    text-decoration: none;
+  }
+
+  .btn {
+    padding: 1rem;
+  }
+}
+
+.card-content {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+
+  .button {
+    width: 100%;
+    padding: 0.5rem;
+    background: $c-white;
+  }
+
+  a {
+    color: $c-secondary;
+    text-decoration: none;
+  }
+}

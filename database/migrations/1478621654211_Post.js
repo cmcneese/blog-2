@@ -1,20 +1,20 @@
-'use strict'
+'use strict';
 
-const Schema = use('Schema')
+const Schema = use('Schema');
 
 class PostsTableSchema extends Schema {
 
-  up () {
+  up() {
     this.create('posts', (table) => {
-      table.increments()
-      table.timestamps()
-    })
+      table.increments();
+      table.timestamps();
+    });
   }
 
-  down () {
-    this.drop('posts')
+  down() {
+    this.drop('posts');
   }
 
 }
 
-module.exports = PostsTableSchema
+module.exports = PostsTableSchema;

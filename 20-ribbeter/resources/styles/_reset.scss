@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: $font;
+  background: $c-white;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.fullpage {
+  min-height: 100vh;
+  background: $c-secondary;
+  font-family: 'Dosis', sans-serif;
+}

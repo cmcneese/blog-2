@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,7 @@
 | Route.resource('user', 'UserController')
 */
 
-const Route = use('Route')
+const Route = use('Route');
 
 // Show the welcome page if the user is logged in
 // If not logged in throw on error
@@ -36,3 +36,8 @@ Route.any('/logout', 'LoginController.destroy');
 // Register all routes for PostController
 // This is only available to logged in users!
 Route.resource('/posts', 'PostController').middleware('auth');
+
+Route.resource('/api/posts', 'Api/PostController').middleware('auth');
+Route.resource('api/comments', 'Api/CommentController').middleware('auth');
+
+Route.any('*').render('vue').middleware('auth');
